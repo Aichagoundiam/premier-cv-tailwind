@@ -1,83 +1,271 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foulemata Goundiam - CV</title>
     <link href="output.css" rel="stylesheet">
+    <style>
+        /* Style global */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* En-tête du CV */
+        header {
+    background-color: #3b1602;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 5px solid #b34b1a;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Étoile à gauche */
+header::before {
+    content: "★";
+    position: absolute;
+    top: 10px; /* Position verticale */
+    left: 20px; /* Position horizontale */
+    font-size: 40px; /* Taille de l'étoile */
+    color: #ffffff; /* Couleur de l'étoile */
+    z-index: 1;
+}
+
+/* Étoile à droite */
+header::after {
+    content: "★";
+    position: absolute;
+    top: 10px; /* Position verticale */
+    right: 20px; /* Position horizontale */
+    font-size: 40px; /* Taille de l'étoile */
+    color: #ffffff; /* Couleur de l'étoile */
+    z-index: 1;
+}
+
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 50px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section */
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #b34b1a;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        section h3 {
+            font-size: 1.3rem;
+            color: #b34b1a;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        /* Contenu de section */
+        .section-content {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section-content ul li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .section-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Bordure et effets */
+        .border-line {
+            border-bottom: 2px solid #b34b1a;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .border-line-small {
+            border-bottom: 1px solid #dfe6e9;
+            margin-top: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Icône de section */
+        .section-content .icon {
+            color: #b34b1a;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 1rem;
+            padding: 20px;
+            background-color: #3b1602;
+            color: white;
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* Liens */
+        a {
+            color: #b34b1a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #b34b1a;
+        }
+
+        /* Animation hover */
+        .card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <div class="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-xl mt-8">
-        <!-- En-tête -->
-        <header class="text-center mb-12">
-            <h1 class="text-5xl font-extrabold text-blue-600">Foulemata Goundiam</h1>
-            <p class="mt-2 text-lg text-gray-500">Développeur Informatique | Licence 2 Génie Informatique</p>
+<body>
+
+    <!-- En-tête du CV -->
+   
+
+    <!-- Contenu principal du CV -->
+    <div class="container">
+        <header>
+            <h1>Foulemata Goundiam</h1>
+            <p>Développeuse Informatique | Licence 2 Génie Informatique</p>
         </header>
-
         <!-- Informations personnelles -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-            <div class="space-y-2">
+        <section>
+            <h2>Informations Personnelles</h2>
+            <div class="section-content">
                 <p><strong>Âge:</strong> 23 ans</p>
                 <p><strong>Adresse:</strong> Guédiawaye</p>
                 <p><strong>Contact:</strong> +221 78 137 73 06</p>
-                <p><strong>Email:</strong> goundiamfoulemata20@gmail.com</p>
+                <p><strong>Email:</strong> <a href="mailto:goundiamfoulemata20@gmail.com">goundiamfoulemata20@gmail.com</a></p>
                 <p><strong>État civil:</strong> Célibataire</p>
             </div>
-            <div class="space-y-2">
-                <p><strong>Langues:</strong> Français, Anglais</p>
-            </div>
+            <div class="border-line-small"></div>
         </section>
 
-        <!-- Expérience professionnelle -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-semibold text-blue-600 mb-4">Expérience Professionnelle</h2>
-            <ul class="list-disc pl-6 text-gray-600 space-y-2">
-                <li>2023/2024 : Stage en entreprise à TGI (Tout en Génie Informatique)</li>
-                <li>2022/2023 : Stage en entreprise à TGI (Tout en Génie Informatique)</li>
-            </ul>
+        <!-- Langues -->
+        <section>
+            <h2>Langues</h2>
+            <div class="section-content">
+                <ul>
+                    <li><span class="icon">💬</span>Français (Courant)</li>
+                    <li><span class="icon">💬</span>Anglais (Intermédiaire)</li>
+                </ul>
+            </div>
+            <div class="border-line-small"></div>
+        </section>
+
+        <!-- Expérience Professionnelle -->
+        <section>
+            <h2>Expérience Professionnelle</h2>
+            <div class="section-content">
+                <ul>
+                    <li><span class="icon">📅</span>2023/2024 : Stage en entreprise à TGI (Tout en Génie Informatique)</li>
+                    <li><span class="icon">📅</span>2022/2023 : Stage en entreprise à TGI (Tout en Génie Informatique)</li>
+                </ul>
+            </div>
+            <div class="border-line-small"></div>
         </section>
 
         <!-- Formation -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-semibold text-blue-600 mb-4">Formation</h2>
-            <ul class="list-disc pl-6 text-gray-600 space-y-2">
-                <li>2023 - 2024 : Licence 2 Génie Informatique à l’Université Professionnelle</li>
-                <li>2022 - 2023 : Licence 1 Génie Informatique à l’Université Professionnelle</li>
-            </ul>
+        <section>
+            <h2>Formation</h2>
+            <div class="section-content">
+                <ul>
+                    <li><span class="icon">🎓</span>2023 - 2024 : Licence 2 Génie Informatique à l’Université Professionnelle</li>
+                    <li><span class="icon">🎓</span>2022 - 2023 : Licence 1 Génie Informatique à l’Université Professionnelle</li>
+                </ul>
+            </div>
+            <div class="border-line-small"></div>
         </section>
 
-        <!-- Compétences -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-semibold text-blue-600 mb-4">Compétences Informatique</h2>
-            <ul class="list-disc pl-6 text-gray-600 space-y-2">
-                <li>Word</li>
-                <li>PowerPoint</li>
-                <li>HTML & CSS</li>
-                <li>PHP</li>
-            </ul>
+        <!-- Compétences Informatique -->
+        <section>
+            <h2>Compétences Informatique</h2>
+            <div class="section-content">
+                <ul>
+                    <li><span class="icon">💻</span>Word</li>
+                    <li><span class="icon">💻</span>PowerPoint</li>
+                    <li><span class="icon">💻</span>HTML & CSS</li>
+                    <li><span class="icon">💻</span>PHP</li>
+                </ul>
+            </div>
+            <div class="border-line-small"></div>
         </section>
 
-        <!-- Diplômes -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-semibold text-blue-600 mb-4">Diplômes Obtenus</h2>
-            <ul class="list-disc pl-6 text-gray-600 space-y-2">
-                <li>2020 - 2021 : Baccalauréat (Bac) au lycée Seydina Limamoulaye</li>
-                <li>2017 - 2018 : Brevet de Fin d’Études Moyennes (BFEM) au Cem Ndiareme</li>
-            </ul>
+        <!-- Diplômes Obtenus -->
+        <section>
+            <h2>Diplômes Obtenus</h2>
+            <div class="section-content">
+                <ul>
+                    <li><span class="icon">📜</span>2020 - 2021 : Baccalauréat (Bac) au lycée Seydina Limamoulaye</li>
+                    <li><span class="icon">📜</span>2017 - 2018 : Brevet de Fin d’Études Moyennes (BFEM) au Cem Ndiareme</li>
+                </ul>
+            </div>
+            <div class="border-line-small"></div>
         </section>
 
         <!-- Centres d'intérêt -->
         <section>
-            <h2 class="text-3xl font-semibold text-blue-600 mb-4">Centres d'intérêt</h2>
-            <p class="text-gray-600">Sport</p>
+            <h2>Centres d'Intérêt</h2>
+            <div class="section-content">
+                <p>Sport, Voyage, Développement personnel</p>
+            </div>
+            <div class="border-line-small"></div>
         </section>
 
         <!-- Footer -->
-        <footer class="mt-12 text-center text-gray-500 text-sm">
-            <p>Développé avec Tailwind CSS | 2024</p>
+        <footer>
+            <p>Développé avec tailwind css ❤️ | 2024</p>
         </footer>
+
     </div>
 
 </body>
+
 </html>
